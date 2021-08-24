@@ -51,3 +51,4 @@ urllib3==1.26.6
 wasabi==0.8.2
 Werkzeug==2.0.1
 zipp==3.5.0
+flask-cors==3.0.10

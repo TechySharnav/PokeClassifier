@@ -5,6 +5,9 @@ from fastai.vision import Path, load_learner, open_image, sys
 from io import BytesIO
 from flask import Flask, jsonify, request
 import requests
+from flask_cors import CORS, cross_origin
+
+
 
 export_file_name = 'model.pkl'
 
@@ -28,9 +31,11 @@ learn = loop.run_until_complete(asyncio.gather(*tasks))[0]
 loop.close()
 
 app = Flask(__name__)
-
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 @app.route("/predictPoke", methods=["GET", "POST"])
+@cross_origin()
 def predict():
     if request.method == "GET":
         img = request.args.get("link")
