@@ -30,7 +30,7 @@ tasks = [asyncio.ensure_future(setup_learner())]
 learn = loop.run_until_complete(asyncio.gather(*tasks))[0]
 loop.close()
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
