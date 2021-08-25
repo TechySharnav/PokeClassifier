@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/pokemon.css">
+    <link rel="icon"
+        href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/240px-Pok%C3%A9_Ball_icon.svg.png">
+    <title>Pokémon Classifier</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="bold">Pokémon Classifier</div>
+        <div>Classify any Pokémon upto VII Gen</div>
+    </div>
+    <div class="main">
+        <div class="text-input-div">
+            <input type="text" id="txt-inpt" placeholder="Enter Link of a Image File">
+        </div>
+        <div class="ruler">
+            <span>OR</span>
+        </div>
+        <div class="file-input-div">
+            <input accept="image/png, image/jpg, image/jpeg, image/webp" type="file" name="file-inpt" id="file-inpt">
+            <div class="label-cont">
+                <label id="file-label" for="file-inpt"><span>Upload a File</span></label>
+                <button class="clear">Clear</butoon>
+            </div>
+            <div class="file-name"></div>
+        </div>
+    </div>
+    <span class="prediction"></span>
+    <button class="classify-btn">Classify</button>
+    <script src="./Assets/pokemon.js"></script>
+</body>
+
+</html>

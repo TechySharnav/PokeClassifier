@@ -3,7 +3,7 @@ import asyncio
 from fastai import *
 from fastai.vision import Path, load_learner, open_image, sys
 from io import BytesIO
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 import requests
 from flask_cors import CORS, cross_origin
 
@@ -48,6 +48,9 @@ def predict():
     prediction = learn.predict(image)[0]
     return jsonify({'result': str(prediction)})
 
+@app.route("/")
+def homePage():
+    return render_template("index.html")
 
 if __name__ == "__main__":
     app.run()
