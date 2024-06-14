@@ -41,8 +41,8 @@ spacy==3.1.2
 spacy-legacy==3.0.8
 srsly==2.4.1
 thinc==8.0.8
-https://download.pytorch.org/whl/cpu/torch-1.1.0-cp37-cp37m-linux_x86_64.whl
-https://download.pytorch.org/whl/cpu/torchvision-0.3.0-cp37-cp37m-linux_x86_64.whl
+torch==1.1.0
+torchvision==0.3.0
 tqdm==4.62.1
 typer==0.3.2
 typing==3.7.4.3
